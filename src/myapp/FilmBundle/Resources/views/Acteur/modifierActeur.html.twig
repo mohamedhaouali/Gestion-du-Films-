@@ -1,0 +1,25 @@
+{% extends "FilmBundle::index.html.twig" %}
+{% block A %}
+     <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Listes Des Categories</p>
+                <div class="list-group">
+                    <a href="{{path('Acteur_ajout')}}" class="list-group-item">Ajouter</a>
+                    <a href="{{path('acteur_editer')}}" class="list-group-item">Editer</a>
+                    <a href="{{path('acteur_affiche')}}" class="list-group-item">Afficher</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+{{message}}
+<form method="post">
+    {{form_widget(form)}}
+    <input type='submit' value="modifier">
+</form>
+    
+  </div>
+     </div>
+ {% endblock %}   
+    

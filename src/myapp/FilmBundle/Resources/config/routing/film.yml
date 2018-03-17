@@ -1,0 +1,32 @@
+film_index:
+    path:     /
+    defaults: { _controller: "FilmBundle:Film:index" }
+    methods:  GET
+
+film_show:
+    path:     /{id}/show
+    defaults: { _controller: "FilmBundle:Film:show" }
+    methods:  GET
+
+film_new:
+    path:     /new
+    defaults: { _controller: "FilmBundle:Film:new" }
+    methods:  [GET, POST]
+
+film_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FilmBundle:Film:edit" }
+    methods:  [GET, POST]
+
+film_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FilmBundle:Film:delete" }
+ 
+film_modifier:
+    path:     /modifier
+    defaults: { _controller: "FilmBundle:Film:modifier" }
+    
+film_recherche:
+    path:     /recherche
+    defaults: { _controller: "FilmBundle:Film:recherche" }    
+

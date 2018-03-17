@@ -1,0 +1,26 @@
+"{{ path('article_show', { 'id': article.id }) }}">
+
+
+{{ path('Visiondpi_details_produit', {'ProdStruct' : ProdStruct, 'id': info.id}) }}
+
+
+
+{{ path('article_show', {'ProdStruct' : ProdStruct, 'id': info.id}) }}
+
+
+"{{path('diagnostic_new')}}"
+
+
+{{path('article_show', { 'id': article.id }) }}")}}
+
+
+
+
+
+
+
+
+
+
+
+<a href="{{ path('article_show', { 'id': article.id }) }}">show</a>

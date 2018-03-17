@@ -1,0 +1,72 @@
+film_film:
+    resource: "@FilmBundle/Resources/config/routing/film.yml"
+    prefix:   /film
+
+film_homepage:
+    path:     /
+    defaults: { _controller: FilmBundle:Default:index }
+
+film_bienvenue:
+    path:     /bienvenue/{id}
+    defaults: { _controller: FilmBundle:Default:bienvenue }
+ 
+film_rectangle:
+    path:     /rectangle/{l}/{h}
+    defaults: { _controller: FilmBundle:Default:rectangle }
+  
+film_categorie:
+    path:     /categorie/ajouter
+    defaults: { _controller: FilmBundle:Categorie:Categorie }
+ 
+film_affiche:
+    path:     /categorie/afficher
+    defaults: { _controller: FilmBundle:Categorie:Affiche }
+    
+Acteur_ajout:
+    path:     /Acteur/ajout
+    defaults: { _controller: FilmBundle:Acteur:Ajout }  
+    
+acteur_affiche:
+    path:     /Acteur/affiche
+    defaults: { _controller: FilmBundle:Acteur:Affiche }
+ 
+acteur_modifer:
+    path:     /Acteur/modifier/{id}
+    defaults: { _controller: FilmBundle:Acteur:Modifier }
+
+acteur_supprimer:
+    path:     /Acteur/supprimer/{id}
+    defaults: { _controller: FilmBundle:Acteur:Supprimer } 
+
+acteur_editer:
+    path:     /Acteur/editer
+    defaults: { _controller: FilmBundle:Acteur:editer }   
+    
+film_details:
+    path:     /details/{id}
+    defaults: { _controller: FilmBundle:Default:details } 
+    
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile  
+    
+film_layout:
+    path:     /
+    defaults: { _controller: FilmBundle:Default:layout } 
+    requirements:
+    

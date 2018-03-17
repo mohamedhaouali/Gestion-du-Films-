@@ -1,0 +1,28 @@
+{% extends "FilmBundle::index.html.twig" %}
+{% block A %}
+     <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead"></p>
+                <div class="list-group">
+                    <a href="{{path('Acteur_ajout')}}" class="list-group-item">Ajouter</a>
+                    <a href="{{path('acteur_editer')}}" class="list-group-item">Editer</a>
+                    <a href="{{path('acteur_affiche')}}" class="list-group-item">Afficher</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <h2 align="center">Afficher Acteur</h2>
+                <table class="table table-striped">
+    {% for a in act %}
+        <tr><td>{{a.nom}} </td>
+            <td>{{a.prenom}}</td>
+            <td>{{a.date|date('d-M-Y')}}</td>
+           <td>{{a.sexe}}</td>
+        </tr>
+        {% endfor %}
+        
+</table>
+            </div>
+     </div>
+ {% endblock %}

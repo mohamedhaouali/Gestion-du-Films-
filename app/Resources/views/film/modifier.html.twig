@@ -1,0 +1,50 @@
+{% extends "FilmBundle::index.html.twig" %}
+
+{% block A %}
+    <div class="row">
+
+        <div class="col-md-3">
+            <p class="lead">Listes Des Categories</p>
+            <div class="list-group">
+                <a href="{{path('film_new')}}"class="list-group-item">Ajouter</a>
+                <a href="{{path('film_modifier')}}"class="list-group-item">editer</a>
+                <a href="{{path('film_index')}}" class="list-group-item">afficher</a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <table class ="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for film in films %}
+                        <tr>
+                            <td><a href="{{ path('film_show', { 'id': film.id }) }}">{{ film.id }}</a></td>
+                            <td>{{ film.titre }}</td>
+                            <td>{{ film.description }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('film_edit', { 'id': film.id }) }}">modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('film_delete', { 'id': film.id }) }}">supprimer</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+
+        </div>    
+    </div>
+{% endblock A %}
